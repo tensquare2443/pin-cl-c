@@ -29,10 +29,8 @@ class Router extends Component {
           'Content-Type': 'application/json'
         }
       }).then((res) => res.json()).then((json) => {
-        setTimeout(() => {
-          window.sessionStorage.setItem('pclDyno', 'loaded');
-          this.setState({loader: false});
-        }, 2000);
+        window.sessionStorage.setItem('pclDyno', 'loaded');
+        this.setState({loader: false});
       }).catch((e) => {
         alert('Heroku server currently unavailable');
         if (window.sessionStorage.pclDyno) {
