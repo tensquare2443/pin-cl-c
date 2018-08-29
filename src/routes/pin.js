@@ -62,7 +62,7 @@ class Pin extends Component {
         //find pin in pins, remove if user.email is only follower, remove self from followers if >1 follower
         //update user in db
       }
-      fetch('http://localhost:3001/pin/remove/from-board', {
+      fetch('https://pin-cl-s-275.herokuapp.com/pin/remove/from-board', {
         method: "POST",
         mode: 'cors',
         headers: {
@@ -99,7 +99,7 @@ class Pin extends Component {
       }
       //all user.boards.pins are good now
 
-      fetch('http://localhost:3001/pin/remove/general', {
+      fetch('https://pin-cl-s-275.herokuapp.com/pin/remove/general', {
         method: "POST",
         mode: 'cors',
         headers: {

@@ -19,7 +19,7 @@ class ProfilePhotoModal extends Component {
 
     this.setState({photoInput: ''});
     this.setState({loader: true});
-    fetch('http://localhost:3001/profile-photo/remove', {
+    fetch('https://pin-cl-s-275.herokuapp.com/profile-photo/remove', {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -46,7 +46,7 @@ class ProfilePhotoModal extends Component {
     this.setState({photoInput: ''});
     this.setState({loader: true});
 
-    fetch('http://localhost:3001/profile-photo/upload', {
+    fetch('https://pin-cl-s-275.herokuapp.com/profile-photo/upload', {
       method: "POST",
       mode: 'cors',
       body: formData

@@ -8,7 +8,7 @@ class LogIn extends Component {
     this.props.logInFormReset();
   }
   demoLogin() {
-    fetch('http://localhost:3001/user/login', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/login', {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -43,7 +43,7 @@ class LogIn extends Component {
       this.props.logInFormChange(logInForm);
       return alert('Please enter a password');
     }
-    fetch('http://localhost:3001/user/login', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/login', {
       method: 'POST',
       mode: 'cors',
       headers: {

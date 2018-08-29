@@ -4,7 +4,7 @@ import * as actions from 'actions';
 
 class Topics extends Component {
   componentDidMount() {
-    fetch('http://localhost:3001/topics').then((res) => {
+    fetch('https://pin-cl-s-275.herokuapp.com/topics').then((res) => {
       return res.json();
     }).then((json) => {
       var topicDocs = json.topicDocs;
@@ -44,7 +44,7 @@ class Topics extends Component {
       }
     }
 
-    fetch('http://localhost:3001/user/update', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/update', {
       method: 'POST',
       mode: 'cors',
       headers: {

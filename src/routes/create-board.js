@@ -26,7 +26,7 @@ class CreateBoard extends Component {
     var board = this.state.createBoardNameInput;
     var user = JSON.parse(JSON.stringify(this.props.user));
 
-    fetch('http://localhost:3001/board/new', {
+    fetch('https://pin-cl-s-275.herokuapp.com/board/new', {
       method: "POST",
       mode: 'cors',
       headers: {

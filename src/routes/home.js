@@ -55,7 +55,7 @@ class Home extends Component {
   }
 
   getAllPins() {
-    fetch('http://localhost:3001/pins/get', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/get', {
       method: "GET",
       mode: "cors",
       headers: {

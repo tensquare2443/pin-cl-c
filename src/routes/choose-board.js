@@ -21,7 +21,7 @@ class ChooseBoard extends Component {
       pins: [JSON.parse(JSON.stringify(this.props.pin))]
     };
 
-    fetch('http://localhost:3001/boards/new-and-save-pin', {
+    fetch('https://pin-cl-s-275.herokuapp.com/boards/new-and-save-pin', {
       method: "POST",
       mode: 'cors',
       headers: {
@@ -61,7 +61,7 @@ class ChooseBoard extends Component {
         break;
       }
     }
-    fetch('http://localhost:3001/pins/save', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/save', {
       method: "POST",
       mode: 'cors',
       headers: {

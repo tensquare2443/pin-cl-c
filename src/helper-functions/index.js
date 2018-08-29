@@ -34,7 +34,7 @@ export const urlLinkFormatted = (url) => {
 
 const getPin = (pinId) => {
   var promise = new Promise((resolve, reject) => {
-    return fetch('http://localhost:3001/pins/get', {
+    return fetch('https://pin-cl-s-275.herokuapp.com/pins/get', {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -53,7 +53,7 @@ export function manualNavigationUserCheck(email, password, loaderExists, boardId
     if (!this.state.loader) {this.setState({loader: true});}
   }
 
-  fetch('http://localhost:3001/user/get', {
+  fetch('https://pin-cl-s-275.herokuapp.com/user/get', {
     method: 'POST',
     mode: 'cors',
     headers: {

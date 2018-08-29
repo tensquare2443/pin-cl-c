@@ -10,7 +10,7 @@ class SignUp extends Component {
   signUpSubmit(e) {
     e.preventDefault();
 
-    fetch('http://localhost:3001/user/new', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/new', {
       method: 'POST',
       mode: 'cors',
       headers: {

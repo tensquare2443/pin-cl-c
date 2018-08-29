@@ -15,7 +15,7 @@ class TopNav extends Component {
     this.searchSubmit = this.searchSubmit.bind(this);
   }
   goHomeAndUnfilter() {
-    fetch('http://localhost:3001/pins/get', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/get', {
       method: "GET",
       mode: "cors",
       headers: {
@@ -35,7 +35,7 @@ class TopNav extends Component {
     e.preventDefault();
     const filterCriteria = this.state.searchBar;
 
-    fetch('http://localhost:3001/pins/filter', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/filter', {
       method: "POST",
       mode: 'cors',
       headers: {

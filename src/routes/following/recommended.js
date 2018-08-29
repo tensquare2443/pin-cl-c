@@ -20,7 +20,7 @@ class Recommended extends Component {
       user.usersFollowing.splice(user.usersFollowing.indexOf(userEmailToUnfollow), 1);
     }
 
-    fetch('http://localhost:3001/user/unfollow', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/unfollow', {
       method: "POST",
       mode: 'cors',
       headers: {
@@ -33,7 +33,7 @@ class Recommended extends Component {
     }).then((res) => res.json()).then((json) => {
       this.props.setUser(json.userDoc);
 
-      fetch('http://localhost:3001/users/all', {
+      fetch('https://pin-cl-s-275.herokuapp.com/users/all', {
         method: "GET",
         mode: 'cors',
         headers: {
@@ -54,7 +54,7 @@ class Recommended extends Component {
     }
 
 
-    fetch('http://localhost:3001/user/follow', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/follow', {
       method: "POST",
       mode: 'cors',
       headers: {
@@ -68,7 +68,7 @@ class Recommended extends Component {
       this.props.setUser(json.userDoc);
 
       //get users
-      fetch('http://localhost:3001/users/all', {
+      fetch('https://pin-cl-s-275.herokuapp.com/users/all', {
         method: "GET",
         mode: 'cors',
         headers: {

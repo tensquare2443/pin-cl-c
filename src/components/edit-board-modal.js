@@ -35,7 +35,7 @@ class EditBoardModal extends Component {
     }
 
     //send user
-    fetch('http://localhost:3001/user/update', {
+    fetch('https://pin-cl-s-275.herokuapp.com/user/update', {
       method: "POST",
       mode: 'cors',
       headers: {
@@ -93,7 +93,7 @@ class EditBoardModal extends Component {
       });
       user.pins = JSON.parse(JSON.stringify(updatedUserPins));
 
-      fetch('http://localhost:3001/user/update-and-check-pins-collection', {
+      fetch('https://pin-cl-s-275.herokuapp.com/user/update-and-check-pins-collection', {
         method: "POST",
         mode: 'cors',
         headers: {
@@ -113,7 +113,7 @@ class EditBoardModal extends Component {
       //go to db, update user obj, then do the follower cut thing on the Pins
     } else {
       //every pin being deleted off this board exists on a different board of same user, so no need to delete from pins db.
-      fetch('http://localhost:3001/user/update', {
+      fetch('https://pin-cl-s-275.herokuapp.com/user/update', {
         method: "POST",
         mode: 'cors',
         headers: {

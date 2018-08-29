@@ -26,7 +26,7 @@ class Following extends Component {
     this.props.setUsers();
   }
   getUsers() {
-    fetch('http://localhost:3001/users/all', {
+    fetch('https://pin-cl-s-275.herokuapp.com/users/all', {
       method: "GET",
       mode: 'cors',
       headers: {

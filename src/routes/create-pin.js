@@ -156,7 +156,7 @@ class CreatePin extends Component {
         display: 'block'
       }
     });
-    fetch('http://localhost:3001/pins/create-and-add-to-board', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/create-and-add-to-board', {
       method: "POST",
       mode: 'cors',
       body: pinFormData
@@ -193,7 +193,7 @@ class CreatePin extends Component {
         display: 'block'
       }
     });
-    fetch('http://localhost:3001/pins/create-and-create-new-board', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/create-and-create-new-board', {
       method: "POST",
       mode: 'cors',
       body: pinFormData
@@ -217,7 +217,7 @@ class CreatePin extends Component {
 
     pinFormData.append('user', JSON.stringify(this.props.user));
 
-    fetch('http://localhost:3001/pins/new', {
+    fetch('https://pin-cl-s-275.herokuapp.com/pins/new', {
         method: 'POST',
         mode: 'cors',
         body: pinFormData
