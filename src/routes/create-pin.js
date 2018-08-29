@@ -167,7 +167,9 @@ class CreatePin extends Component {
       this.setState({
         loadingDisplay: {display: 'none'}
       });
-    }).catch((e) => alert(`e: ${e}`));
+    }).catch((e) => {
+      alert(`Error: Server Not Responding`);
+    });
 
     //you need to first save the pin and get the id, so do that on the back end.
     //so send the formData, the oldUser, and the board.
@@ -204,7 +206,9 @@ class CreatePin extends Component {
       this.setState({
         loadingDisplay: {display: 'none'}
       });
-    }).catch((e) => alert(`e: ${e}`));
+    }).catch((e) => {
+      alert(`Error: Server Not Responding`);
+    });
   }
   nameInputChange(e) {
     const createBoardNameInput = e.currentTarget.value;
