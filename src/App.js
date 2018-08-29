@@ -10,28 +10,30 @@ class App extends Component {
       loader: false
     };
   }
-  // componentDidMount() {
-  //   if (!window.sessionStorage.pclDyno) {
-  //     this.setState({loader: true});
-  //     fetch('https://pin-cl-s-275.herokuapp.com/confirm-live', {
-  //       method: "POST",
-  //       mode: "cors",
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       }
-  //     }).then((res) => res.json()).then((json) => {
-  //       window.sessionStorage.setItem('pclDyno', 'loaded');
-  //       this.setState({loader: false});
-  //     }).catch((e) => {
-  //       alert('Heroku server currently unavailable');
-  //       if (window.sessionStorage.pclDyno) {
-  //         window.sessionStorage.removeItem('pclDyno');
-  //       }
-  //     });
-  //   }
-  // }
+  componentDidMount() {
+    if (!window.sessionStorage.pclDyno) {
+      this.setState({loader: true});
+      fetch('https://pin-cl-s-275.herokuapp.com/confirm-live', {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then((res) => res.json()).then((json) => {
+        setTimeout(() => {
+          window.sessionStorage.setItem('pclDyno', 'loaded');
+          this.setState({loader: false});
+        }, 2000);
+      }).catch((e) => {
+        alert('Heroku server currently unavailable');
+        if (window.sessionStorage.pclDyno) {
+          window.sessionStorage.removeItem('pclDyno');
+        }
+      });
+    }
+  }
   render() {
-    {/*if (this.state.loader) {
+    if (this.state.loader) {
       return (
         <div className="App">
           <div style={{textAlign: "center"}}>
@@ -45,14 +47,14 @@ class App extends Component {
           </div>
         </div>
       );
-    } else {*/}
+    } else {
       return (
         <div className="App">
           <Router/>
           <Footer/>
         </div>
       );
-    {/*}*/}
+
   }
 }
 
