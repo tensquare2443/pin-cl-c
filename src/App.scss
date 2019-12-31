@@ -730,6 +730,7 @@ body {
     margin-top: 20px;
     @media screen and (min-width: $break-xs) {
       width: $break-xs;
+      box-shadow: none;
     }
     .sign-up-item, .sign-up-form-item {
       display: flex;

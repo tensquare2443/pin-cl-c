@@ -539,13 +539,13 @@ body {
   body .sign-up-cont {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px grey;
+    box-shadow: none;
     width: 100%;
     margin: auto;
     margin-top: 20px; }
     @media screen and (min-width: 416px) {
       body .sign-up-cont {
-        width: 416px; } }
+        width: 416px; box-shadow: 0px 0px 10px grey; } }
     body .sign-up-cont .sign-up-item, body .sign-up-cont .sign-up-form-item {
       display: flex;
       flex-direction: column;

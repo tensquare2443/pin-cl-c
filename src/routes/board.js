@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect, Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import * as actions from 'actions';
 import TopNav from 'components/top-nav';
 import EditBoardModal from 'components/edit-board-modal';

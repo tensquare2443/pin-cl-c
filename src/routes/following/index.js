@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-  Redirect,
   Link,
   Route,
   Switch

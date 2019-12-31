@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
-import {Redirect, Link, Switch, Route} from 'react-router-dom';
+import {Link, Switch, Route} from 'react-router-dom';
 import TopNav from 'components/top-nav';
 import Boards from 'routes/profile/boards';
 import Pins from 'routes/profile/pins';

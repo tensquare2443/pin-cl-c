@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Create from 'components/create';
 import * as actions from 'actions';
-import {encode} from 'base64-arraybuffer';
 import {
   urlDisplayFormatted,
   urlLinkFormatted,

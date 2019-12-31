@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 import * as actions from 'actions';
 import TopNav from 'components/top-nav';
 import {
   urlDisplayFormatted,
   urlLinkFormatted,
   manualNavigationUserCheck,
-  redirector,
-  scrollTop
+  redirector
 } from 'helper-functions';
 
 //localStorage stuff

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 import * as actions from 'actions';
 import {
   redirector,
@@ -61,7 +60,7 @@ class CreatePin extends Component {
       image: false
     };
     const isUrlValid = (url) => {
-      var test = url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+      var test = url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/g);
 
       if(test == null) {
       	return false;
@@ -170,10 +169,6 @@ class CreatePin extends Component {
     }).catch((e) => {
       alert(`Error: Server Not Responding`);
     });
-
-    //you need to first save the pin and get the id, so do that on the back end.
-    //so send the formData, the oldUser, and the board.
-    //do your pin save, and on success, update user.pins, user.boards, and the board doc
   }
   createBoardSubmit(e) {
     e.preventDefault();
@@ -185,10 +180,6 @@ class CreatePin extends Component {
 
     pinFormData.append('user', JSON.stringify({oldUser}));
     pinFormData.append('boardName', boardName);
-
-    //SWIRL
-
-
 
     this.setState({
       loadingDisplay: {
