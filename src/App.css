@@ -1158,3 +1158,12 @@ body {
         border-top: 1px solid #ECECEC;
         border-bottom: 1px solid #ECECEC;
         margin: 18px 8px 8px 8px; }
+
+        .pin-inner-container {
+          width: 240px;
+        }
+        @media(max-width: 575px) {
+          .pin-inner-container {
+            width: 400px;
+          }
+        }
